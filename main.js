@@ -1,13 +1,3 @@
-//fysik = 0
-//svenska = 1
-//Daodac = 2
-//Eget val = 3
-//matte = 4
-//webbutveckling = 5
-//programmering = 6
-//mentorstid = 7
-//engelska = 8
-//ingen lektion = 9
 class lesson {
   constructor(name, teacher, href) {
     this.name = name;
@@ -18,25 +8,25 @@ class lesson {
 
 var currentLesson;
 
-const 0 = new lesson("Fysik", "Nicholas", "");
-const 1 = new lesson("Svenska", "Pontus", "");
-const 2 = new lesson("Daodac", "Jonas", "");
-const 3 = new lesson("Eget val", "", "");
-const 4 = new lesson("Matte", "Joel", "");
-const 5 = new lesson("Webbutveckling", "Sebastian", "");
-const 6 = new lesson("Programmering", "Babis", "");
-const 7 = new lesson("Mentorstid", "Anna", "");
-const 8 = new lesson("Engelska", "Linda", "");
-const 9 = new lesson("Ingen lektion", "", "");
+const physics = new lesson("Fysik", "Nicholas", "");
+const swedish = new lesson("Svenska", "Pontus", "https://meet.google.com/xnz-cqck-aet");
+const daodac = new lesson("Daodac", "Jonas", "");
+const eget_val = new lesson("Eget val", "", "");
+const math = new lesson("Matte", "Joel", "");
+const webdevelopment = new lesson("Webbutveckling", "Sebastian", "");
+const programming = new lesson("Programmering", "Babis", "");
+const mentoring_time = new lesson("Mentorstid", "Anna", "");
+const english = new lesson("Engelska", "Linda", "");
+const no_lesson = new lesson("Ingen lektion", "Ingen lektion", "");
 
-var monday = [new 0, new 1, new 2];
-var tuesday = [new 3, new 1, new 4, new 0, new 3];
-var wednesday = [new 3, new 5, new 6, new 3];
-var thursday = [new 4, new 7, new 8];
-var friday = [new 2, new 5, new 0, new 8];
+var monday = [physics, swedish, daodac];
+var tuesday = [eget_val, swedish, math, physics, eget_val];
+var wednesday = [eget_val, webdevelopment, programming, eget_val];
+var thursday = [math, mentoring_time, english];
+var friday = [daodac, webdevelopment, physics, english];
 
 switch (new Date().getDay()) {
-  case 0:
+  case 1:
     switch (new Date().getHours) {
       case 8:
         currentLesson = 0;
@@ -57,11 +47,9 @@ switch (new Date().getDay()) {
       var lessonName = monday[i].name;
       section.appendChild(p);
       p.appendChild(lessonName);
-      var lessonTeacher = monday[i].teacher;
-
     }
     break;
-  case 1:
+  case 2:
     switch (new Date().getHours) {
       case 8:
         currentLesson = 3;
@@ -80,9 +68,28 @@ switch (new Date().getDay()) {
       default:
         currentLesson = 9;
         break;
-      }
-    break;
-  case 2:
+    }
+    for (var i = 0; i < tuesday.length; i++) {
+      var section = document.createElement("section");
+      var p = document.createElement("p");
+      var a = document.createElement("a");
+      var main = document.getElementById("main");
+      var lessonName = document.createTextNode(tuesday[i].name);
+      var alink = document.createTextNode("link");
+      var aonclick = document.createAttribute("onclick");
+      var ahref = document.createAttribute("href");
+      a.appendChild(alink);
+      p.appendChild(lessonName);
+      section.appendChild(a);
+      section.appendChild(p);
+      aonclick.value = "location.href=tuesday[i].href; return false;";
+      ahref.value = "";
+      a.setAttributeNode(aonclick);
+      a.setAttributeNode(ahref);
+      main.appendChild(section);
+    }
+  break;
+  case 3:
     switch (new Date().getHours) {
       case 8:
         currentLesson = 3;
@@ -101,7 +108,7 @@ switch (new Date().getDay()) {
         break;
       }
     break;
-  case 3:
+  case 4:
     switch (new Date().getHours) {
       case 9:
         currentLesson = 4;
@@ -117,7 +124,7 @@ switch (new Date().getDay()) {
         break;
   }
     break;
-  case 4:
+  case 5:
     switch (new Date().getHours) {
       case 8:
         currentLesson = 2;
