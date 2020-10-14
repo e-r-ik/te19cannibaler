@@ -246,7 +246,7 @@ switch (currentLesson) {
     break;
 }
 
-
+//simon är snygg
 /*let linkButton = document.querySelector(".linkbutton");
 linkButton.addEventListener("click", () => {
 
