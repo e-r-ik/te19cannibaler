@@ -1,5 +1,6 @@
 body {
   background-color: #f8f8f8;
+  font-family: sans-serif;
 }
 
 main {
@@ -7,24 +8,27 @@ main {
   flex-direction: column;
   margin-left: 20%;
   margin-right: 20%;
-  border: 1px solid black;
-  border-radius: 2vh;
 }
 
 section {
   display: flex;
   flex-direction: row;
-  border: 1px solid black;
-  border-radius: 1vh;
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
 
 p, h1 {
   margin-left: 5%;
   margin-right: 5%;
+  font-family: sans-serif;
 }
 
 button {
   margin-right: 5%;
   margin-left: auto;
+  font-family: sans-serif;
   background-color: orange;
+  border: none;
+  width: 8vh;
+  height: 4vh;
 }
