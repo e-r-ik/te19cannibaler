@@ -8,16 +8,15 @@ class lesson {
 
 var currentLesson;
 
-const physics = new lesson("Fysik", "Nicholas", "");
+const physics = new lesson("Fysik", "Nicholas", "https://meet.google.com/hcv-qebw-stv");
 const swedish = new lesson("Svenska", "Pontus", "https://meet.google.com/xnz-cqck-aet");
-const daodac = new lesson("Daodac", "Jonas", "");
+const daodac = new lesson("Daodac", "Jonas", "https://meet.google.com/xnz-cqck-aet");
 const eget_val = new lesson("Eget val", "", "");
-const math = new lesson("Matte", "Joel", "");
-const webdevelopment = new lesson("Webbutveckling", "Sebastian", "");
-const programming = new lesson("Programmering", "Babis", "");
-const mentoring_time = new lesson("Mentorstid", "Anna", "");
-const english = new lesson("Engelska", "Linda", "");
-const no_lesson = new lesson("Ingen lektion", "Ingen lektion", "");
+const math = new lesson("Matte", "Joel", "https://meet.google.com/ucf-njxf-gmo");
+const webdevelopment = new lesson("Webbutveckling", "Sebastian", "https://meet.google.com/ubw-evhu-nah");
+const programming = new lesson("Programmering", "Babis", "https://meet.google.com/bdp-brmh-tgf");
+const mentoring_time = new lesson("Mentorstid", "Anna", "https://meet.google.com/kfu-ofkh-usg");
+const english = new lesson("Engelska", "Linda", "https://meet.google.com/gzc-dnmy-yce");
 
 var monday = [physics, swedish, daodac];
 var tuesday = [eget_val, swedish, math, physics, eget_val];
@@ -27,7 +26,7 @@ var friday = [daodac, webdevelopment, physics, english];
 
 switch (new Date().getDay()) {
   case 1:
-    switch (new Date().getHours) {
+    switch (new Date().getHours()) {
       case 8:
         currentLesson = 0;
         break;
@@ -44,13 +43,25 @@ switch (new Date().getDay()) {
     for (var i = 0; i < monday.length; i++) {
       var section = document.createElement("section");
       var p = document.createElement("p");
-      var lessonName = monday[i].name;
-      section.appendChild(p);
+      var button = document.createElement("button");
+      var main = document.getElementById("main");
+      var lessonName = document.createTextNode(monday[i].name);
+      var buttonlink = document.createTextNode("link");
+      var buttononclick = document.createAttribute("onclick");
+      var buttontype = document.createAttribute("type")
+      button.appendChild(buttonlink);
       p.appendChild(lessonName);
+      section.appendChild(p);
+      section.appendChild(button);
+      buttontype.value = "button";
+      buttononclick.value = "location.href='" + monday[i].href + "';";
+      button.setAttributeNode(buttononclick);
+      button.setAttributeNode(buttontype);
+      main.appendChild(section);
     }
     break;
   case 2:
-    switch (new Date().getHours) {
+    switch (new Date().getHours()) {
       case 8:
         currentLesson = 3;
         break;
@@ -72,25 +83,25 @@ switch (new Date().getDay()) {
     for (var i = 0; i < tuesday.length; i++) {
       var section = document.createElement("section");
       var p = document.createElement("p");
-      var a = document.createElement("a");
+      var button = document.createElement("button");
       var main = document.getElementById("main");
       var lessonName = document.createTextNode(tuesday[i].name);
-      var alink = document.createTextNode("link");
-      var aonclick = document.createAttribute("onclick");
-      var ahref = document.createAttribute("href");
-      a.appendChild(alink);
+      var buttonlink = document.createTextNode("link");
+      var buttononclick = document.createAttribute("onclick");
+      var buttontype = document.createAttribute("type")
+      button.appendChild(buttonlink);
       p.appendChild(lessonName);
-      section.appendChild(a);
       section.appendChild(p);
-      aonclick.value = "location.href=tuesday[i].href; return false;";
-      ahref.value = "";
-      a.setAttributeNode(aonclick);
-      a.setAttributeNode(ahref);
+      section.appendChild(button);
+      buttontype.value = "button";
+      buttononclick.value = "location.href='" + tuesday[i].href + "';";
+      button.setAttributeNode(buttononclick);
+      button.setAttributeNode(buttontype);
       main.appendChild(section);
     }
-  break;
+    break;
   case 3:
-    switch (new Date().getHours) {
+    switch (new Date().getHours()) {
       case 8:
         currentLesson = 3;
         break;
@@ -107,9 +118,28 @@ switch (new Date().getDay()) {
         currentLesson = 9;
         break;
       }
+    for (var i = 0; i < wednesday.length; i++) {
+      var section = document.createElement("section");
+      var p = document.createElement("p");
+      var button = document.createElement("button");
+      var main = document.getElementById("main");
+      var lessonName = document.createTextNode(wednesday[i].name);
+      var buttonlink = document.createTextNode("link");
+      var buttononclick = document.createAttribute("onclick");
+      var buttontype = document.createAttribute("type")
+      button.appendChild(buttonlink);
+      p.appendChild(lessonName);
+      section.appendChild(p);
+      section.appendChild(button);
+      buttontype.value = "button";
+      buttononclick.value = "location.href='" + wednesday[i].href + "';";
+      button.setAttributeNode(buttononclick);
+      button.setAttributeNode(buttontype);
+      main.appendChild(section);
+    }
     break;
   case 4:
-    switch (new Date().getHours) {
+    switch (new Date().getHours()) {
       case 9:
         currentLesson = 4;
         break;
@@ -122,10 +152,29 @@ switch (new Date().getDay()) {
       default:
         currentLesson = 9;
         break;
-  }
+    }
+    for (var i = 0; i < thursday.length; i++) {
+      var section = document.createElement("section");
+      var p = document.createElement("p");
+      var button = document.createElement("button");
+      var main = document.getElementById("main");
+      var lessonName = document.createTextNode(thursday[i].name);
+      var buttonlink = document.createTextNode("link");
+      var buttononclick = document.createAttribute("onclick");
+      var buttontype = document.createAttribute("type")
+      button.appendChild(buttonlink);
+      p.appendChild(lessonName);
+      section.appendChild(p);
+      section.appendChild(button);
+      buttontype.value = "button";
+      buttononclick.value = "location.href='" + thursday[i].href + "';";
+      button.setAttributeNode(buttononclick);
+      button.setAttributeNode(buttontype);
+      main.appendChild(section);
+    }
     break;
   case 5:
-    switch (new Date().getHours) {
+    switch (new Date().getHours()) {
       case 8:
         currentLesson = 2;
         break;
@@ -142,15 +191,63 @@ switch (new Date().getDay()) {
         currentLesson = 9;
         break;
       }
+    for (var i = 0; i < friday.length; i++) {
+      var section = document.createElement("section");
+      var p = document.createElement("p");
+      var button = document.createElement("button");
+      var main = document.getElementById("main");
+      var lessonName = document.createTextNode(friday[i].name);
+      var buttonlink = document.createTextNode("link");
+      var buttononclick = document.createAttribute("onclick");
+      var buttontype = document.createAttribute("type")
+      button.appendChild(buttonlink);
+      p.appendChild(lessonName);
+      section.appendChild(p);
+      section.appendChild(button);
+      buttontype.value = "button";
+      buttononclick.value = "location.href='" + friday[i].href + "';";
+      button.setAttributeNode(buttononclick);
+      button.setAttributeNode(buttontype);
+      main.appendChild(section);
+    }
     break;
 }
 
 switch (currentLesson) {
   case 0:
-    currentLesson = "https://meet.google.com/hcv-qebw-stv";
+    currentLesson = "location.url='https://meet.google.com/hcv-qebw-stv';";
     break;
-  case 9:
-    currentLesson = "https://reddit.com/r/bottomgear"
+  case 1:
+    currentLesson = "location.url='https://meet.google.com/xnz-cqck-aet';";
+    break;
+  case 2:
+    currentLesson = "location.url='https://meet.google.com/xnz-cqck-aet';";
+    break;
+  case 3:
+    currentLesson = "location.url='https://reddit.com/r/bottomgear';";
+    break;
+  case 4:
+    currentLesson = "location.url='https://meet.google.com/ucf-njxf-gmo';";
+    break;
+  case 5:
+    currentLesson = "location.url='https://meet.google.com/ubw-evhu-nah';";
+    break;
+  case 6:
+    currentLesson = "location.url='https://meet.google.com/bdp-brmh-tgf';";
+    break;
+  case 7:
+    currentLesson = "location.url='https://meet.google.com/kfu-ofkh-usg';";
+    break;
+  case 8:
+    currentLesson = "location.url='https://meet.google.com/gzc-dnmy-yce';";
+    break;
   default:
-
+    currentLesson = "location.url='https://reddit.com/r/bottomgear';";
+    break;
 }
+
+
+/*let linkButton = document.querySelector(".linkbutton");
+linkButton.addEventListener("click", () => {
+
+});*/
