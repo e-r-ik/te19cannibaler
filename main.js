@@ -215,34 +215,34 @@ switch (new Date().getDay()) {
 
 switch (currentLesson) {
   case 0:
-    currentLesson = "location.url='https://meet.google.com/hcv-qebw-stv';";
+    document.getElementById("anchor").href = "https://meet.google.com/hcv-qebw-stv";
     break;
   case 1:
-    currentLesson = "location.url='https://meet.google.com/xnz-cqck-aet';";
+    document.getElementById("anchor").href = "https://meet.google.com/xnz-cqck-aet";
     break;
   case 2:
-    currentLesson = "location.url='https://meet.google.com/afi-aoaf-jyn';";
+    document.getElementById("anchor").href = "https://meet.google.com/afi-aoaf-jyn";
     break;
   case 3:
-    currentLesson = "location.url='https://reddit.com/r/bottomgear';";
+    document.getElementById("anchor").href = "https://reddit.com/r/bottomgear";
     break;
   case 4:
-    currentLesson = "location.url='https://meet.google.com/ucf-njxf-gmo';";
+    document.getElementById("anchor").href = "https://meet.google.com/ucf-njxf-gmo";
     break;
   case 5:
-    currentLesson = "location.url='https://meet.google.com/ubw-evhu-nah';";
+    document.getElementById("anchor").href = "https://meet.google.com/ubw-evhu-nah";
     break;
   case 6:
-    currentLesson = "location.url='https://meet.google.com/bdp-brmh-tgf';";
+    document.getElementById("anchor").href = "https://meet.google.com/bdp-brmh-tgf";
     break;
   case 7:
-    currentLesson = "location.url='https://meet.google.com/kfu-ofkh-usg';";
+    document.getElementById("anchor").href = "https://meet.google.com/kfu-ofkh-usg";
     break;
   case 8:
-    currentLesson = "location.url='https://meet.google.com/gzc-dnmy-yce';";
+    document.getElementById("anchor").href = "https://meet.google.com/gzc-dnmy-yce";
     break;
   default:
-    currentLesson = "location.url='https://reddit.com/r/bottomgear';";
+    document.getElementById("anchor").href = "https://reddit.com/r/bottomgear";
     break;
 }
 
