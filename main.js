@@ -34,6 +34,7 @@ switch (new Date().getDay()) {
         currentLesson = 1;
         break;
       case 12:
+      case 13:
         currentLesson = 2;
         break;
       default:
@@ -66,15 +67,19 @@ switch (new Date().getDay()) {
         currentLesson = 3;
         break;
       case 9:
+      case 10:
+      case 11:
         currentLesson = 1;
         break;
       case 12:
         currentLesson = 4;
         break;
       case 13:
+      case 14:
         currentLesson = 0;
         break;
       case 15:
+      case 16:
         currentLesson = 3;
       default:
         currentLesson = 9;
@@ -106,12 +111,17 @@ switch (new Date().getDay()) {
         currentLesson = 3;
         break;
       case 9:
+      case 10:
+      case 11:
         currentLesson = 5;
         break;
       case 12:
+      case 13:
+      case 14:
         currentLesson = 6;
         break;
       case 15:
+      case 16:
         currentLesson = 3;
         break;
       default:
@@ -141,12 +151,15 @@ switch (new Date().getDay()) {
   case 4:
     switch (new Date().getHours()) {
       case 9:
+      case 10:
+      case 11:
         currentLesson = 4;
         break;
       case 12:
         currentLesson = 7;
         break;
       case 13:
+      case 14:
         currentLesson = 8;
         break;
       default:
@@ -176,15 +189,18 @@ switch (new Date().getDay()) {
   case 5:
     switch (new Date().getHours()) {
       case 8:
+      case 9:
         currentLesson = 2;
         break;
       case 12:
         currentLesson = 5;
         break;
       case 13:
+      case 14:
         currentLesson = 0;
         break;
       case 15:
+      case 16:
         currentLesson = 8;
         break;
       default:
