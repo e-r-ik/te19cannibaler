@@ -10,7 +10,7 @@ var currentLesson;
 
 const physics = new lesson("Fysik", "Nicholas", "https://meet.google.com/hcv-qebw-stv");
 const swedish = new lesson("Svenska", "Pontus", "https://meet.google.com/xnz-cqck-aet");
-const daodac = new lesson("Daodac", "Jonas", "https://meet.google.com/afi-aoaf-jyn");
+const daodac = new lesson("Daodac", "Jonas", "https://meet.google.com/ndp-kvtm-cip");
 const eget_val = new lesson("Eget val", "", "");
 const math = new lesson("Matte", "Joel", "https://meet.google.com/ucf-njxf-gmo");
 const webdevelopment = new lesson("Webbutveckling", "Sebastian", "https://meet.google.com/ubw-evhu-nah");
